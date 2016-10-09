@@ -10,6 +10,9 @@
 \usepackage{geometry}
 \usepackage{amsthm}
 \usepackage{pgfplots}
+\usepackage{array}
+\usepackage[format=hang,font=small,labelfont=bf]{caption}
+
 
 \usepackage[intlimits]{amsmath}
 \marginsize{3cm}{3cm}{1.5cm}{1.5cm}
@@ -58,6 +61,7 @@ W następnej kolejności chcemy zbadać pomiar zależności okresu drgań od dł
 
 \begin{table}[ht]
 \centering
+\setlength{\extrarowheight}{1.5pt}
 \caption{Pomiar okresu drgań przy ustalonej długości wahadła.}
 Długość wahadła $l = 395 mm$, niepewność pomiarowa $u(l) = 1 mm$.
 \begin{tabular}{|c|c|c|c|}
@@ -78,8 +82,9 @@ Lp. & liczba okresów $k$ & czas $t$ dla $k$ okresów w [$s$] & okres $T_{i}=t/k
 
 \begin{table}[ht]
 \centering
+\setlength{\extrarowheight}{1.5pt}
 \caption{Pomiar zależności okresu drgań od długości wahadła.}
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{| @{\hspace{2mm}}c @{\hspace{2mm}}| @{\hspace{6mm}}c @{\hspace{6mm}}|@{\hspace{6mm}} c@{\hspace{6mm}}|@{\hspace{6mm}}c @{\hspace{6mm}}| @{\hspace{6mm}}c @{\hspace{6mm}}|@{\hspace{6mm}} c@{\hspace{6mm}}|}
 \hline
 Lp. & $l[mm]$ & $k$ & $t[s]$ & $T_{i}[s]$ & $T_{i}^{2}[s^{2}]$ \\ \hline
 1 & 105 & 30 & 19,25 & 0,641667 & 0,411736\\ \hline
@@ -119,7 +124,7 @@ $s_{T}=\sqrt{\frac{\sum(T_{i}-\overline{T})^{2}}{n-1}}$
 \begin{center}
 $s_{T}=\sqrt{\frac{(1,245667-1,242833)^{2}+(1,240667-1,242833)^{2}+\cdots+(1,246000-1,242833)^{2}}{10-1}}\approx0,004089s$
 \end{center}
-Ponieważ za wynik pomiaru przyjmujemy średnią, \textbf{niepewność pomiaru $u(x)$} utożsamiamy z~estymatorem odchylenia standardowego średniej.
+Ponieważ za wynik pomiaru przyjmujemy średnią, \textbf{niepewność pomiaru $u(T)$} utożsamiamy z~estymatorem odchylenia standardowego średniej.
 \begin{center}
 \textbf{Estymator odchylenia standardowego średniej:}
 \end{center}
@@ -131,7 +136,7 @@ $u(T)\approx\dfrac{0,004089s}{\sqrt{10}}\approx0,001293s$
 \end{center}
 
 \subsection{Niepewność typu B - pomiar długości wahadła}
-Długość wahadła otrzymałyśmy mierząc go przymiarem milimetrowym od środka masy ciała do punktu zawieszenia ``na oko'' -- przyjmujemy niepewność równą działce skali $u(l) = 1mm$. 
+Długość wahadła otrzymałyśmy mierząc go przymiarem milimetrowym od środka masy ciała do punktu zawieszenia ``na oko'' -- przyjmujemy niepewność równą działce elementarnej linijki -- $u(l)=1mm$. 
 
 \subsection{Przyspieszenie ziemskie}
 Aby obliczyć przyspieszenie ziemskie korzystamy ze wzoru:
