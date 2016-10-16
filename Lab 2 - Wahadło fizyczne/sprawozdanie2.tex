@@ -39,11 +39,25 @@
 \end{LARGE}
 \end{center}
 
-\section*{Wstęp teoretyczny}
+
 
 \section{Cel ćwiczenia}
 Opis ruchu drgającego, a w szczególności drgań wahadła fizycznego. Wyznaczenie momentów bezwładności brył sztywnych.
 
+\section{Wstęp teoretyczny}
+Moment bezwładności punktu materialnego o masie $m$ obracającego się wokół osi $O$ w odległości $r$ definiujemy jako:
+$$I=mr^{2}$$
+Bryłę sztywną można traktować jako ciągły zbiór punktów materialnych o różnych odległościach od osi obrotu. Wobec powyższego moment bezwładności wyraża się następująco:
+$$I=\int r^{2}dm$$
+Wahadło fizyczne jest to bryła sztywna o masie $m$ zawieszona w punkcie $O$ różnym od środka ciężkości. Wahadło odchylone od pionu o kąt $\theta$, a następnie puszczone swobodnie będzie wykonywać pod wpływem momentu siły ciężkości drgania zwane ruchem wahadłowym. Moment tej siły dla wychylenia $\theta$ jest równy $mgasin\theta$. Ruch ten opisuje II zasada dynamiki dla ruchu obrotowego, zgodnie z którą iloczyn momentu bezwładności $I$  i przyspieszenia kątowego $\varepsilon$ jest równy działającemu momentowi siły, czyli:
+$$ \varepsilon = \frac{d^{2}\theta}{dt^{2}} \Rightarrow I_{o}\displaystyle \frac{d^{2}\theta}{dt^{2}}=-mga\sin\theta$$
+Siła $mgsin\theta$ jest zawsze skierowana przeciwnie do kierunku wychylenia -- stąd znak minus we wzorze.
+Jeżeli rozpatrujemy ruch dla małych kątów wychylenia, to sinus kąta można zastąpić samym kątem w mierze łukowej, ponieważ $sin\theta \approx \theta$. Zatem powyższe równanie przyjmuje postać: 
+$$\frac{d^{2}\theta}{dt^{2}} + \dfrac{mga\theta}{I_{o}}=0,$$
+jest to równanie ruchu harmonicznego z okresem:
+$$T=2\pi\sqrt{\frac{I_{o}}{mga}}$$
+\textbf{Twierdzenie Steinera} mówi, że jeśli znamy moment bezwładności $I_{S}$ danego ciała względem pewnej osi przechodzącej przez środek masy tego ciała, to aby obliczyć moment bezwładności $I_{0}$ względem dowolnej innej osi równoległej do niej, należy do momentu $I_{S}$ dodać iloczyn masy ciała i kwadratu odległości $a$ między tymi osiami:
+$$I_{0}=I_{S}+ma^{2}$$
 \section{Układ pomiarowy}
 
 \begin{itemize}
@@ -57,7 +71,7 @@ Opis ruchu drgającego, a w szczególności drgań wahadła fizycznego. Wyznacze
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=0.8\linewidth]{./schemat}
+\includegraphics[width=0.7\linewidth]{./schemat}
 \caption{Pręt i pierścień używane w ćwiczeniu.}
 \end{figure}
 
@@ -69,16 +83,17 @@ nieprzekraczającej trzech stopni i mierzymy czas trzydziestu drgań. Pomiar ten
 \section{Opracowanie wyników pomiarów}
 
 \begin{table}[ht]
+
 \centering
 \setlength{\extrarowheight}{2pt}
 \caption{\textbf{Pomiar masy i długości pręta.}}
 \begin{tabular}{| @{\hspace{8mm}}c @{\hspace{8mm}}| @{\hspace{8mm}}c @{\hspace{8mm}}|@{\hspace{8mm}} c@{\hspace{8mm}}|}
 \hline
  & wartość & niepewność  \\ \hline
-$m[g]$ & 30 & 37,37 \\ \hline
-$l[mm]$ & 30 & 37,22 \\ \hline
-$b[mm]$ & 30 & 37,25 \\ \hline
-$a[mm]$ & 30 & 37,34 \\ \hline
+$m[g]$ & 663 & 0,1 \\ \hline
+$l[mm]$ & 750 & 1 \\ \hline
+$b[mm]$ & 100 & 1 \\ \hline
+$a[mm]$ & 275 & 1 \\ \hline
 
 \end{tabular}
 \end{table}
@@ -90,61 +105,63 @@ $a[mm]$ & 30 & 37,34 \\ \hline
 \begin{tabular}{| @{\hspace{8mm}}c @{\hspace{8mm}}| @{\hspace{8mm}}c @{\hspace{8mm}}|@{\hspace{8mm}} c@{\hspace{8mm}}|}
 \hline
  & wartość & niepewność  \\ \hline
-$m[g]$ & 30 & 37,37 \\ \hline
-$D_{W}[mm]$ & 30 & 37,22 \\ \hline
-$D_{Z}[mm]$ & 30 & 37,25 \\ \hline
-$R_{W}[mm]$ & 30 & 37,22 \\ \hline
-$R_{Z}[mm]$ & 30 & 37,25 \\ \hline
-$e[mm]$ & 30 & 37,34 \\ \hline
-$a[mm]$ & 30 & 37,34 \\ \hline
+$m[g]$ & 1360 & 0,1 \\ \hline
+$D_{W}[mm]$ & 255,6 & 0,1 \\ \hline
+$D_{Z}[mm]$ & 280,4 & 0,1 \\ \hline
+$R_{W}[mm]$ & 127,8 & 0,1 \\ \hline
+$R_{Z}[mm]$ & 140,2 & 0,1 \\ \hline
+$e[mm]$ & 7,6 & 0,1 \\ \hline
+$a[mm]$ & 132,6 & 0,1 \\ \hline
 
 \end{tabular}
 \end{table}
 
 \begin{table}[ht]
+\vspace*{0.5 cm}
 \centering
 \setlength{\extrarowheight}{2pt}
 \caption{\textbf{Pomiar okresu drgań dla pręta.}}
 \begin{tabular}{|c|c|c|c|}
 \hline
 Lp. & liczba okresów $k$ & czas $t$ dla $k$ okresów w [$s$] & okres $T_{i}=t/k$ w [$s$] \\ \hline
-1 & 30 & 37,37 & 1,245667\\ \hline
-2 & 30 & 37,22 & 1,240667\\ \hline
-3 & 30 & 37,25 & 1,241667\\ \hline
-4 & 30 & 37,34 & 1,244667\\ \hline
-5 & 30 & 37,06 & 1,235333\\ \hline
-6 & 30 & 37,32 & 1,244000\\ \hline
-7 & 30 & 37,31 & 1,243667\\ \hline
-8 & 30 & 37,13 & 1,237667\\ \hline
-9 & 30 & 37,47 & 1,249000\\ \hline
-10 & 30 & 37,38 & 1,246000\\ \hline
-\multicolumn{4}{|c|}{Wartość średnia okresu: $\overline{T}= $} \\ \hline
-\multicolumn{4}{|c|}{Niepewność: $u(T)=$} \\ \hline
+1 & 20 & 26,47 & 1,3235\\ \hline
+2 & 20 & 26,84 & 1,342\\ \hline
+3 & 20 & 26,68 & 1,334\\ \hline
+4 & 20 & 26,69 & 1,3345\\ \hline
+5 & 20 & 26,78 & 1,339\\ \hline
+6 & 20 & 26,75 & 1,3375\\ \hline
+7 & 20 & 26,75 & 1,3375\\ \hline
+8 & 20 & 26,87 & 1,3435\\ \hline
+9 & 20 & 26,54 & 1,327\\ \hline
+10 & 20 & 26,78 & 1,339\\ \hline
+\multicolumn{4}{|c|}{Wartość średnia okresu: $\overline{T}= 1,33575$} \\ \hline
+\multicolumn{4}{|c|}{Niepewność: $u(T)\approx 0,0020$} \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!ht]
+\vspace*{0.5 cm}
 \centering
 \setlength{\extrarowheight}{2pt}
 \caption{\textbf{Pomiar okresu drgań dla pierścienia.}}
 \begin{tabular}{|c|c|c|c|}
 \hline
 Lp. & liczba okresów $k$ & czas $t$ dla $k$ okresów w [$s$] & okres $T_{i}=t/k$ w [$s$] \\ \hline
-1 & 30 & 37,37 & 1,245667\\ \hline
-2 & 30 & 37,22 & 1,240667\\ \hline
-3 & 30 & 37,25 & 1,241667\\ \hline
-4 & 30 & 37,34 & 1,244667\\ \hline
-5 & 30 & 37,06 & 1,235333\\ \hline
-6 & 30 & 37,32 & 1,244000\\ \hline
-7 & 30 & 37,31 & 1,243667\\ \hline
-8 & 30 & 37,13 & 1,237667\\ \hline
-9 & 30 & 37,47 & 1,249000\\ \hline
-10 & 30 & 37,38 & 1,246000\\ \hline
-\multicolumn{4}{|c|}{Wartość średnia okresu: $\overline{T}= $} \\ \hline
-\multicolumn{4}{|c|}{Niepewność: $u(T)$=} \\ \hline
+1 & 20 & 20,72 & 1,036\\ \hline
+2 & 20 & 20,79 & 1,0395\\ \hline
+3 & 20 & 20,75 & 1,0375\\ \hline
+4 & 20 & 20,72 & 1,036\\ \hline
+5 & 20 & 20,69 & 1,0345\\ \hline
+6 & 20 & 20,71 & 1,0355\\ \hline
+7 & 20 & 20,69 & 1,0345\\ \hline
+8 & 20 & 20,69 & 1,0345\\ \hline
+9 & 20 & 20,62 & 1,031\\ \hline
+10 & 20 & 20,82 & 1,041\\ \hline
+\multicolumn{4}{|c|}{Wartość średnia okresu: $\overline{T}= 1,036s$} \\ \hline
+\multicolumn{4}{|c|}{Niepewność: $u(T)\approx 0,00089s$} \\ \hline
 \end{tabular}
 \end{table}
-
+$$$$
 \subsection{Moment bezwładności $I_{0}$ względem rzeczywistej osi obrotu korzystając z~wzoru na okres drgań}
 Wzór na okres drgań wyraża się wzorem:
 $$T=2\pi\sqrt{\dfrac{I_{0}}{mga}}$$
@@ -153,18 +170,18 @@ $$I_{0}=\dfrac{mgaT^{2}}{4\pi^{2}},$$
 gdzie $m$ -- masa bryły, $g$ -- przyspieszenie ziemskie, $T$ -- okres drgań, $a$ -- odległość środka masy od osi obrotu.
 $$$$
 \textbf{Momement bezdładności $I_{0}$ dla pręta:}
-$$I_{0} = $$
-\textbf{Momement bezdładności $I_{0}$ dla pierścienia:
-}$$I_{0} = $$
+$$I_{0} = \dfrac{0,663kg\cdot 9,811\dfrac{m}{s^{2}}\cdot 0,275m \cdot (1,33575s)^{2}}{4\pi^{2}}\approx ~0,08084 kg \cdot m^{2}$$
+\textbf{Momement bezdładności $I_{0}$ dla pierścienia:}
+$$I_{0} = \dfrac{1,36kg\cdot 9,811\dfrac{m}{s^{2}}\cdot 0,1326m \cdot (1,036s)^{2}}{4\pi^{2}}\approx 0,048096~ kg \cdot m^{2}$$
 
 \subsection{Moment bezwładności $I_{S}$ względem osi przechodzącej przez środek masy korzystając z twierdzenia Steinera}
 Twierdzenie Steinera stosuje się do obliczania momentu bezwładności bryły względem osi przesuniętej równolegle o długość $a$, gdzie $I_{S}$ to moment bezwładności względem osi przechodzącej przez środek masy bryły.
 $$I_{0}=I_{S}+ma^{2}$$
 $$I_{S}=I_{0}-ma^{2}$$
 \textbf{Momement bezdładności $I_{S}$ dla pręta:
-}$$I_{S} = $$
+}$$I_{S} =0,080836 kg \cdot m^{2} - 0,663kg\cdot (0,275m)^{2}\approx 0,03070~kg \cdot m^{2}$$
 \textbf{Momement bezdładności $I_{S}$ dla pierścienia:
-}$$I_{S} = $$
+}$$I_{S} = 0,048096 kg \cdot m^{2} - 1,36kg\cdot (0,1326m)^{2}\approx 0,02418~kg \cdot m^{2}$$
 
 \subsection{Moment bezwładności względem osi przechodzącej przez środek masy $I_{S}^{(geom)}$ na podstawie masy i wymiarów geometrycznych}
 Moment bezwładności większości regularnych brył można zapisać w postaci: 
@@ -174,8 +191,11 @@ zależny tylko od kształtu bryły i wyboru charakterystycznego wymiaru (np. pro
 $$$$
 \textbf{Momement bezdładności $I_{S}^{(geom)}$ dla pręta:
 }$$I_{S}^{(geom)} = \dfrac{1}{12}ml^{2}$$
+$$I_{S}^{(geom)} = \dfrac{1}{12}\cdot 0,663kg\cdot (0,75m)^{2}\approx 0,031078kg \cdot m^{2}$$
 \textbf{Momement bezdładności $I_{S}^{(geom)}$ dla pierścienia:
 }$$I_{S}^{(geom)} = \dfrac{1}{12}m(R^{2}+r^{2})$$
+$$I_{S}^{(geom)} = \dfrac{1}{12}\cdot 1,36kg\cdot ((0,1402m)^{2}+(0,1278m)^{2})\approx 0,024472kg \cdot m^{2}$$
+
 
 \subsection{Niepewności mierzonych wielkości}
 \subsubsection{Niepewność pomiaru okresu -- niepewność typu A}
@@ -184,33 +204,47 @@ $$u(T)=\displaystyle \frac{\sqrt{\frac{\sum(T_{i}-\overline{T})^{2}}{n-1}}}{\sqr
 gdzie $n$ -- liczba pomiarów, $\overline{T}=\frac{1}{n}\sum T_{\mathrm{i}}$ -- średni czas trwania okresu.
 $$$$
 \textbf{Niepewność pomiaru okresu dla pręta:}
-$$\overline{T}=$$ 
-$$u(T)=\displaystyle \sqrt{\frac{\sum(T_{i}-\overline{T})^{2}}{n(n-1)}}$$
+$$\overline{T}=1,33575s$$ 
+$$u(T)=\displaystyle \sqrt{\frac{(1,3235s-1,33575s)^{2}+\cdots +(1,339s-1,33575s)^{2}}{10(10-1)}}\approx 0,0020s$$
 \textbf{Niepewność pomiaru okresu dla pierścienia:}
-$$\overline{T}=$$ 
-$$u(T)=\displaystyle \sqrt{\frac{\sum(T_{i}-\overline{T})^{2}}{n(n-1)}}$$
+$$\overline{T}=1,036s$$ 
+$$u(T)=\displaystyle \sqrt{\frac{(1,036s-1,036s)^{2}+\cdots +(1,041s-1,036s)^{2}}{10(10-1)}} \approx 0,00089s$$
 \subsubsection{Niepewność pomiaru masy}
-Niepewność pomiaru masy jest równa działce elementarnej wagi $u(m)=1g$.
+Do określenia masy pręta i pierścienia posłużyła nam waga cyfrowa o dokładności $0,001kg$, więc $u(m)=1g$.
 \subsubsection{Niepewność pomiaru wymiarów geometrycznych}
-Przyjmujemy niepewność równą działce elementarnej linijki $u(l)=1mm$. Wyjątek stanowi wielkość $e$ wyrażona poprzez różnicę promieni $R_{Z}$ i $R_{W}$, ze względu na małe rozmiary przyjmujemy niepewność pomiaru $u(e)=0,1mm$. Jeśli odległość $a=\dfrac{l}{2}-b$, to analogicznie $u(a)=0,5mm$;
+W pomiarze pręta przyjmujemy niepewność równą działce elementarnej linijki $u(l)=1mm$, $u(a)=1mm$, $u(b)=1mm$. Wszystkie wartości długości związanych z pierścieniem były mierzone za pomocą suwmiarki, której dokładność wynosiła $0,1mm$, zatem $u(D_{W})=0,1mm$, $u(D_{Z})=0,1mm$, $u(R_{W})=0,1mm$, $u(R_{Z})=0,1mm$, $u(e)=0,1mm$, $u(a)=0,1mm$.
 \subsection{Niepewność złożona momentu bezwładności $I_{0}$}
+Wzór z którego korzystamy:
+$$\frac{u(I_o)}{I_0}=\sqrt{\left (\frac{u(m)}{m}\right ) ^2+\left ( \frac{u(a)}{a}\right )^2+\left (2 \frac{u(T)}{T}\right )^2}$$
 \textbf{Niepewność złożona momentu bezwładności $I_{0}$ dla pręta:}
-$$$$
+$$
+\frac{u(I_o)}{I_0}=\sqrt{\left(\frac{0,001}{0,663}\right) ^2+\left( \frac{0,001}{0,275}\right)^2+\left(2 \frac{0,0020}{1,33575}\right)^2} \approx 0,0049
+$$
+$$u(I_0)\approx 0,00040~kg\cdot m^2$$
 \textbf{Niepewność złożona momentu bezwładności $I_{0}$ dla pierścienia:}
-
+$$
+\frac{u(I_o)}{I_0}=\sqrt{\left(\frac{0,001}{1,36}\right) ^2+\left( \frac{0,0001}{0,1326}\right)^2+\left(2 \frac{0,00089}{1,036}\right)^2} \approx 0,0020
+$$
+$$u(I_0)\approx 0,000097~kg\cdot m^2$$
 \subsection{Niepewność złożona momentu bezwładności $I_{S}$}
+Wzór z którego korzystamy:
+$$u(I_s)=\sqrt{\left( u(I_0)\right)^2+\left(a^2u(m) \right)^2+\left( -2amu(m)\right)^2}$$
 \textbf{Niepewność złożona momentu bezwładności $I_{S}$ dla pręta:}
-$$$$
+$$u(I_s)=\sqrt{\left( 0,00040\right)^2+\left(0,275^2\cdot 0,001 \right)^2+\left( -2\cdot 0,275\cdot 0,663\cdot 0,001\right)^2}~kg\cdot m^2$$
+$$u(I_s)\approx 0,00055~kg\cdot m^2$$
 \textbf{Niepewność złożona momentu bezwładności $I_{S}$ dla pierścienia:}
+$$u(I_s)=\sqrt{\left( 0,000097\right)^2+\left(0,1326^2\cdot 0,001 \right)^2+\left( -2\cdot 0,1326\cdot 1,36\cdot 0,001\right)^2}~kg\cdot m^2$$
+$$u(I_s)\approx 0,00037~kg\cdot m^2$$
 
 \subsection{Niepewność $u_{c}(I_{S}^{(geom)})$}
 \textbf{Niepewność $u_{c}(I_{S}^{(geom)})$ dla pręta:}
-$$$$
+$$
+u(I_{s}^{geom})=\sqrt{\left(\frac{l^2}{12}\cdot u(m) \right)^2+\left(\frac{2lm}{12}\cdot u(l) \right)^2}$$
+$$u(I_{s}^{geom})=0,000095~kg\cdot m^2$$
 \textbf{Niepewność $u_{c}(I_{S}^{(geom)})$ dla pierścienia:}
+$$u(I_{s}^{geom})=\sqrt{\left (\frac{R_z^2+R_w^2}{2}\cdot u(m) \right )^2+\left (mR_z\cdot u(R_z) \right )^2+\left (mR_w\cdot u(R_w) \right )^2}$$
 
-\subsection{Porównanie metod wyznaczenia momentu bezwładności}
-
-\subsection{Zgodność wyników pomiaru w granicach niepewności rozszerzonej}
+$$u(I_{s}^{geom})=0,000058~kg\cdot m^2$$
 
 \begin{table}[ht]
 \centering
@@ -224,8 +258,8 @@ $$$$
 \end{center} & \begin{center}
 \textbf{$I_{S}$ wyznaczone z~pomiarów geometrycznych $[kg\cdot m^{2}]$}
 \end{center}  \\ \hline
-wartość & \begin{center}30\end{center} & \begin{center}37,37\end{center} & \begin{center}66\end{center}\\ \hline
-niepewność &\begin{center}30\end{center} & \begin{center}37,37\end{center} & \begin{center}66\end{center}\\ \hline
+wartość & \begin{center}0,08084(40)\end{center} & \begin{center}0,03070(55)\end{center} & \begin{center}0,031078(95)\end{center}\\ \hline
+niepewność &\begin{center}0,00040\end{center} & \begin{center}0,00055\end{center} & \begin{center}0,000095\end{center}\\ \hline
 
 \end{tabular}
 \end{table}
@@ -242,18 +276,35 @@ niepewność &\begin{center}30\end{center} & \begin{center}37,37\end{center} & \
 \end{center} & \begin{center}
 \textbf{$I_{S}$ wyznaczone z~pomiarów geometrycznych $[kg\cdot m^{2}]$}
 \end{center}  \\ \hline
-wartość & \begin{center}30\end{center} & \begin{center}37,37\end{center} & \begin{center}66\end{center}\\ \hline
-niepewność &\begin{center}30\end{center} & \begin{center}37,37\end{center} & \begin{center}66\end{center}\\ \hline
-
+wartość & \begin{center}0,048096(97)\end{center} & \begin{center}0,02418(37)\end{center} & \begin{center}0,024472(58)\end{center}\\ \hline
+niepewność &\begin{center}0,000097\end{center} & \begin{center}0,00037\end{center} & \begin{center}0,000058\end{center}\\ \hline
 \end{tabular}
 \end{table}
 
+\subsection{Porównanie metod wyznaczenia momentu bezwładności}
+Na podstawie wartości z tabel 5 i 6 można stwierdzić, że dokładniejsze wartości momentu bezwładności uzyskuje się poprzez pomiary wymiarów geometrycznych, ponieważ niepewności pomiarów są mniejsze.
 
-
+\subsection{Zgodność wyników pomiaru w granicach niepewności rozszerzonej}
+Aby wyniki były zgodne w granicach niepewności rozszerzonej to $|I_{s} - I_{geom}|<U(I_{s} - I_{geom})$.
+$$U(I_{s} - I_{geom}) = k \cdot \sqrt{(u(I_{s})^2 + u(I_{geom})^2},$$
+gdzie współczynnik rozszerzalności $k = 2$.
+$$$$
+\textbf{Zgodność wyników pomiaru w granicach niepewności rozszerzonej dla pręta:}
+$$U(I_{s} - I_{geom}) \approx 0,0011~kg \cdot m^2$$
+$$|I_{s} - I_{geom}| \approx 0,00038~kg \cdot m^2$$
+Wyniki pomiarów uznajemy za zgodne ze sobą, ponieważ: 
+$$0,00038 < 0,0011$$
+$$|I_{s} - I_{geom}| < U(I_{s} - I_{geom})$$
+\textbf{Zgodność wyników pomiaru w granicach niepewności rozszerzonej dla pierścienia:}
+$$U(I_{s} - I_{geom}) \approx 0,00075~kg \cdot m^2$$
+$$|I_{s} - I_{geom}| \approx 0,00029~kg \cdot m^2$$
+Wyniki pomiarów uznajemy za zgodne ze sobą, ponieważ: 
+$$ 0,00029<0,00075 $$
+$$|I_{s} - I_{geom}| < U(I_{s} - I_{geom})$$
 \section{Wnioski}
 \begin{itemize}
-\item 
-\item 
-\item  
+\item Doświadczenie zostało przeprowadzone prawidłowo, wyniki pomiarów mieszczą się w granicach niepewności rozszerzonej zarówno dla pręta, jak i dla pierścienia.
+\item Dokładniejszym sposobem wyznaczania momentu bezwładności bryły jest skorzystanie z~zależności geometrycznych zamiast z twierdzenia Steinera.
+
 \end{itemize}
 \end{document}
