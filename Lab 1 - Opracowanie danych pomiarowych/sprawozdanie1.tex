@@ -3,6 +3,7 @@
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{array}
 \usepackage{graphicx}
 \usepackage{anysize}
 \usepackage{enumerate}
@@ -10,10 +11,9 @@
 \usepackage{geometry}
 \usepackage{amsthm}
 \usepackage{pgfplots}
-\usepackage{array}
+\usepackage{sidecap}
+\usepackage{wrapfig}
 \usepackage[format=hang,font=small,labelfont=bf]{caption}
-
-
 \usepackage[intlimits]{amsmath}
 \marginsize{3cm}{3cm}{1.5cm}{1.5cm}
 \sloppy
@@ -41,20 +41,34 @@
 
 Zaznajomienie się z typowymi metodami opracowania danych pomiarowych przy wykorzystaniu wyników pomiarów dla wahadła prostego. 
 
+\section{Wstęp teoretyczny}
+\begin{wrapfigure}{l}{0.25\textwidth}
+\includegraphics[width=0.25\textwidth]{./wahadlowstep}
+\end{wrapfigure}
+Wahadło matematyczne to punkt materialny zawieszony na nieważkiej i nierozciągliwej nici.
+
+Na rysunku przedstawione są działające siły, gdzie siły $\vec{F_{N}}$ i $\vec{F_{S}}$ to siły składowe. Siłę $\vec{F_{N}}$ równoważy siła naciągu nitki, więc o ruchu wahadła decyduje tylko siła $\vec{F_{S}}$. 
+
+Wychylamy punkt materialny z położenia równowagi o bardzo mały kącie $\alpha< 5^{o}$. Możemy wyprowadzić wzór na okres wahadła: 
+$$T=2\pi\sqrt{\dfrac{l}{g}}$$
+Okres wahadła matematycznego jest wprost proporcjonalny do pierwiastka z długości wahadła.
+Gdy przekształcimy ten wzór uzyskamy wzór na przyśpieszenie grawitacyjne:
+
+$$g=\frac{4\pi^{2}l}{T^{2}}$$
+
+\begin{wrapfigure}{r}{0.18\textwidth}
+\vspace*{-1.5 cm}
+\includegraphics[width=0.18\textwidth]{./wahadlo}
+\vspace*{-2.5 cm}
+\end{wrapfigure}
+
 \section{Układ pomiarowy}
-
-Do uzyskania pomiarów niezbędny jest zestaw wahadła prostego (Rysunek 1), sekundomierz (stoper) oraz przymiar milimetrowy (linijka). 
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.3\linewidth]{./wahadlo}
-\caption{Schemat wahadła matematycznego.}
-\end{figure}
+Do uzyskania pomiarów niezbędny jest zestaw wahadła prostego (rysunek po prawej), sekundomierz (stoper) oraz przymiar milimetrowy (linijka).
 
 \section{Wykonanie ćwiczenia}
 
 Przy pomocy linijki dokonujemy pomiaru długości wahadła rozumianą jako odległość od środka ciężarka do punktu zawieszenia nici. Niewielką masę wprawiamy w ruch z małą amplitudą (nieprzekraczającą 3 stopni) i mierzymy czas wykonania się 30 pełnych okresów. Sekundomierz uruchamiamy i zatrzymujemy w tej samej fazie ruchu. Pomiar powtarzamy dziesięciokrotnie.
-
+\newpage
 W następnej kolejności chcemy zbadać pomiar zależności okresu drgań od długości wahadła, więc dziesięciokrotnie mierzymy czas wykonania się 30 pełnych okresów jak wcześniej, lecz na różnych długościach nici w zakresie od 10 cm do długości maksymalnej.
   
 \section{Wyniki i ich opracowanie}
@@ -132,11 +146,11 @@ Ponieważ za wynik pomiaru przyjmujemy średnią, \textbf{niepewność pomiaru $
 $u(T)=s_{\overline{T}}=\displaystyle \frac{s_{T}}{\sqrt{n}}$
 \end{center}
 \begin{center}
-$u(T)\approx\dfrac{0,004089s}{\sqrt{10}}\approx0,001293s$  
+$u(T)\approx\dfrac{0,004089s}{\sqrt{10}}\approx0,0013s$  
 \end{center}
 
 \subsection{Niepewność typu B - pomiar długości wahadła}
-Długość wahadła otrzymałyśmy mierząc go przymiarem milimetrowym od środka masy ciała do punktu zawieszenia ``na oko'' -- przyjmujemy niepewność równą działce elementarnej linijki -- $u(l)=1mm$. 
+Długość wahadła otrzymałyśmy mierząc go przymiarem milimetrowym od środka masy ciała do punktu zawieszenia ``na oko'' -- przyjmujemy niepewność równą $u(l)=3mm$. 
 
 \subsection{Przyspieszenie ziemskie}
 Aby obliczyć przyspieszenie ziemskie korzystamy ze wzoru:
@@ -149,17 +163,31 @@ Niepewność złożoną obliczamy korzystając z \textbf{prawa przenoszenia niep
 \begin{center}
 \begin{align*}
 u_{c}(g)&=\sqrt{\left(\frac{\partial f}{\partial l}u(l)\right)^{2}+\left(\frac{\partial f}{\partial T}u(T)\right)^{2}}=\sqrt{\left[\frac{4\pi^{2}}{\overline{T}^{2}}u(l)\right]^{2}+\left[\frac{8\pi^{2}l}{\overline{T}^{3}}u(T)\right]^{2}}\\
-&\approx\sqrt{\left[\frac{4\pi^{2}}{(1,242833s)^{2}}\cdot0,001m\right]^{2}+\left[\frac{8\pi^{2}\cdot0,395m}{(1,242833s)^{3}}\cdot0,001293s\right]^{2}}\\
-&\approx0,030057\dfrac{m}{s^{2}}
+&\approx\sqrt{\left[\frac{4\pi^{2}}{(1,242833s)^{2}}\cdot0,003m\right]^{2}+\left[\frac{8\pi^{2}\cdot0,395m}{(1,242833s)^{3}}\cdot0,0013s\right]^{2}}\\
+&\approx0,078\dfrac{m}{s^{2}}
 \end{align*}
 \end{center}
 
-\subsection{Niepewność rozszerzona $U(g)$}
+Wyliczoną wartość $g$ możemy zapisać uwzględniając teraz niepewność złożoną $u_{c}(g)$:
+$$g=10,100(78)\dfrac{m}{s^{2}}$$
 
+\subsection{Niepewność rozszerzona $U(g)$}
 Niepewność rozszerzoną wyrażamy jako iloczyn niepewności złożonej i bezwymiarowego współczynnika rozszerzenia $k$ (umowna wartość to $k=2$).
 $$
-U(g)=k \cdot u_{c}(g)\approx 2 \cdot0,030057\frac{m}{s^{2}}\approx0,060114\frac{m}{s^{2}}
+U(g)=k \cdot u_{c}(g)\approx 2 \cdot0,078\frac{m}{s^{2}}\approx0,16\frac{m}{s^{2}}
 $$
+Wyliczoną wartość $g$ możemy zapisać uwzględniając teraz niepewność rozszerzoną $U(g)$:
+$$g=10,10(16)\dfrac{m}{s^{2}}$$
+
+\subsection{Porównanie z wartością tabelaryczną}
+Wartość zmierzona $g_{z}$:
+$$g_{z}= 10,10\dfrac{m}{s^{2}}$$
+Wartość tabelaryczna $g$:
+$$g= 9,811\dfrac{m}{s^{2}}$$
+
+$$|g-g_{z}|=0,289\dfrac{m}{s^{2}}>0,16\dfrac{m}{s^{2}}$$
+Wartość zmierzona nie mieści się w granicach niepewności rozszerzonej, a co za tym idzie również złożonej.
+
 \subsection{Wykres zależności okresu od długości wahadła $T(l)$}
 
 \begin{center}
@@ -226,17 +254,32 @@ coordinates {
 Korzystając z funkcji REGLINP() w arkuszu kalkulacyjnym obliczyłyśmy współczynnik $a$ prostej $y = ax$, który wyniósł:
 $$a \approx 3,912982 \dfrac{s^{2}}{m}$$
 Niepewność współczynnika kierunkowego prostej:
-$$u(a)\approx 0,047773 \dfrac{s^{2}}{m}$$
-Korelacja liniowa danych wyniosła $r^{2}\approx 0,998809 \pm 0,009794$, co świadczy o tym, że uzyskałyśmy dobre dopasowanie danych. Punkty układają się na lub bardzo blisko linii prostej $y=3,912982x$, co widać to także na powyższym wykresie.
+$$u(a)\approx 0,048 \dfrac{s^{2}}{m}$$
+Wyliczoną wartość $a$ możemy zapisać uwzględniając teraz niepewność $u(a)$:
+$$a=3,913(48)\dfrac{s^{2}}{m}$$
+Korelacja liniowa danych wyniosła $r^{2}\approx 0,998809 \pm 0,009794$, co świadczy o tym, że uzyskałyśmy dobre dopasowanie danych. Punkty układają się na lub bardzo blisko linii prostej $y=3,913x$, co widać to także na powyższym wykresie.
+
 \subsection{Wartość przyspieszenia ziemskiego z otrzymanej wartości współczynnika nachylenia $a =\dfrac{4\pi^{2}}{g}$}
 Przekształcając wzór do postaci:
 $$g = \dfrac{4\pi^{2}}{a}$$
 oraz podstawiając współczynnik kierunkowy $a$ wyliczony w poprzednim podpunkcie otrzymujemy:
 $$g \approx \dfrac{4\pi^{2}}{3,912982\dfrac{s^{2}}{m}} \approx 10,089088\dfrac{m}{s^{2}}$$
+
 \subsection{Niepewność $u(g)$ na podstawie uzyskanej z dopasowania niepewności $u(a)$}
 Wyprowadzając wzór i podstawiając otrzymane wcześniej wartości $a$ oraz $u(a)$ otrzymujemy: 
 $$u(g)=\sqrt{\left[\frac{\partial g}{\partial a}u(a)\right]^{2}}=\left|\frac{\partial g}{\partial a}u(a)\right|=\left|\frac{\partial\frac{4\pi^{2}}{a}}{\partial a}u(a)\right|=\left|\frac{-4\pi^{2}}{a^{2}}u(a)\right|$$
-$$u(g)\approx\left|\frac{-4\pi^{2}}{ \left(3,912982 \dfrac{s^{2}}{m}\right)^{2}}0,047773 \dfrac{s^{2}}{m}\right| \approx 0,123175\dfrac{m}{s^{2}}$$
+$$u(g)\approx\left|\frac{-4\pi^{2}}{ \left(3,913 \dfrac{s^{2}}{m}\right)^{2}}0,048 \dfrac{s^{2}}{m}\right| \approx 0,12\dfrac{m}{s^{2}}$$
+Wyliczoną wartość $g$ możemy zapisać uwzględniając teraz niepewność $u(g)$ na podstawie uzyskanej z dopasowania niepewności $u(a)$:
+$$g=10,10(12)\dfrac{m}{s^{2}}$$
+
+\subsection{Porównanie z wartością tabelaryczną}
+Wartość zmierzona $g_{z}$:
+$$g_{z}= 10,10\dfrac{m}{s^{2}}$$
+Wartość tabelaryczna $g$:
+$$g= 9,811\dfrac{m}{s^{2}}$$
+
+$$|g-g_{z}|=0,289\dfrac{m}{s^{2}}> 0,12\dfrac{m}{s^{2}}$$
+Wartość zmierzona nie mieści się w granicach niepewności $u(g)$ na podstawie uzyskanej z dopasowania niepewności $u(a)$.
 
 \section{Wnioski}
 \begin{itemize}
