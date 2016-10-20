@@ -3,6 +3,7 @@
 \usepackage[polish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{array}
 \usepackage{graphicx}
 \usepackage{anysize}
 \usepackage{enumerate}
@@ -10,6 +11,11 @@
 \usepackage{geometry}
 \usepackage{amsthm}
 \usepackage{pgfplots}
+\usepackage{tabularx}
+\usepackage{sidecap}
+\usepackage{wrapfig}
+\usepackage[format=hang,font=small,labelfont=bf]{caption}
+
 
 \usepackage[intlimits]{amsmath}
 \marginsize{3cm}{3cm}{1.5cm}{1.5cm}
@@ -35,20 +41,144 @@
 \end{center}
 
 \section{Cel ćwiczenia}
+Celem ćwiczenia było zapoznanie z zasadą działania mostka Wheatstone’a w oparciu o prądowe i napięciowe prawo Kirchoffa służące do opisu złożonych obwodów elektrycznych oraz metody pomiaru nieznanych oporów oraz ich połączeń szeregowych i równoległych zgodnie z prawem Ohma.
 
+\section{Wstęp teoretyczny}
+\begin{wrapfigure}{l}{0.4\textwidth}
+\vspace*{-0.5cm}
+\includegraphics[width=0.4\textwidth]{./schemat}
+\end{wrapfigure}
+Mostek Wheatstone’a jest jednym z klasycznych sposobów dokładnego pomiaru nieznanego oporu elektrycznego. Załóżmy, że mamy nieznany opór $R_x$, znane opory $R_a$, $R_b$ oraz regulowaną opornicę dekadową o oporze $R_2$. Zestawiamy następujący obwód: do szeregowego połączenia oporów $R_x$, $R_2$ przyłączamy równolegle połączenie szeregowe $R_a$, $R_b$. Węzły pomiędzy wspomnianymi parami oporów łączymy galwanometrem. Po przyłożeniu do układu różnicy potencjałów możemy regulować $R_2$ tak, aby galwanometr wskazywał 0, czyli brak różnicy potencjałów, a co za tym idzie i brak przepływu prądu między odpowiednimi węzłami. Wtedy z praw Ohma i Kirchhoffa możemy wyprowadzić następujące wzory: 
+$$I_a\cdot R_a=I_x\cdot R_x$$
+$$I_b\cdot R_b=I_d\cdot R_2$$
+Z powyższych równań wynika równość spadków napięć na odpowiednich oporach oraz równość odpowiednich natężeń prądów, czyli:
+$$I_a=I_b$$
+$$I_x=I_d$$
+Stąd można wyprowadzić wyrażenie na $R_x$:
+$$R_x=R_a\frac{I_a}{I_x}=R_a\frac{I_b}{I_d}=R_2\frac{R_a}{R_b}$$
+Ponieważ $R_a$ i $R_b$ są oporami odcinków tego samego jednorodnego drutu, ich wielkości są proporcjonalne do długości:
+$$\frac{R_a}{R_b}=\dfrac{a}{b}=\dfrac{a}{l-a}$$
+Ostatecznie otrzymujemy, że:
+$$R_x=R_2\dfrac{a}{l-a}$$
+Dokładność pomiaru mostkiem Wheatstone’a z drutem oporowym zależy przede wszystkim od błędu wyznaczenia odległości $a$. Aby pomiar był najdokładniejszy należy tak dobrać opór $R2$, aby stan równowagi mostka można było uzyskać w przybliżeniu w połowie długości drutu oporowego.
 
 \section{Układ pomiarowy}
-
-
-\section{Wykonanie ćwiczenia}
- 
- 
-\section{Opracowanie wyników pomiarów}
-
-\section{Wnioski}
+Układ mostka Wheatstone’a pokazany został na rysunku w punkcie nr 2 \textit{Wstęp teoretyczny}. W~skład obwodu wchodzą:
 \begin{itemize}
-\item 
-\item 
-\item  
+\item Listwa z drutem oporowym, zaopatrzona w podziałkę milimetrową i kontakt ślizgowy umożliwiający zmiany długości odcinków $a$ i $b$.
+\item  Opornica dekadowa
+\item  Zestaw oporników oznaczony symbolem $R_x$, umieszczony na płytce z pleksiglasu.
+\item Mikroamperomierz $G$ jako wskaźnik zerowania mostka. Jego czułość można regulować.
+\item Zasilacz.
 \end{itemize}
+
+\section{Przebieg doświadczenia}
+Przy przeprowadzaniu eksperymentu skorzystałyśmy z układu pomiarowego, którego schemat przedstawia poniższy rysunek. Pomiędzy punktami $A$ i $C$ znajduje się listwa z  drutem oporowym o znanej długości. $R_2$ jest opornikiem wzorcowym o regulowanej wartości oporu, a $R_x$ nieznanym oporem, którego wartość chcemy wyznaczyć. Zrównoważenie mostka polega na takim ustawieniu punktu $D$, aby dla zadanej wartości $R_2$ przez galwanometr nie płynął prąd.
+
+\section{Wyniki pomiarów}
+
+
+\begin{table}[!ht]
+\setlength{\extrarowheight}{5pt}
+\centering
+\begin{tabularx}{\textwidth}{XXXXXXXXXXX}
+
+\multicolumn{11}{c}{\textbf{Opornik $R_1$}}\\        
+\hline
+$R_1[\Omega]$  & 25 & 20 & 30 & 15 & 13 & 10 & 8 & 5 & 18 & 23 \\
+\hline
+$a[mm]$  & 354 & 427 & 331 & 472 & 512 & 599 & 612 & 682 & 427 & 378  \\
+\hline
+$R_{x_1}$ & 13,70 &	14,90 &	14,84 &	13,41 &	13,64 &	14,94 &	12,62 &	10,72 &	13,41 &	13,98
+\\    
+\hline   
+\end{tabularx}
+\begin{tabularx}{\textwidth}{XX}
+Wartość średnia oporu: $\overline{R}_{x_1}= 13,62~\Omega$ & Niepewność: $u(R_{x_1})\approx $\\
+
+\end{tabularx}
+\end{table}
+
+\begin{table}[!ht]
+\setlength{\extrarowheight}{5pt}
+\centering
+\begin{tabularx}{\textwidth}{XXXXXXXXXXX}
+
+\multicolumn{11}{c}{\textbf{Opornik $R_2$}}\\        
+\hline
+$R_2[\Omega]$  &20	&30	&10	&35	&25	&15	&18	&12	&22	&28   \\
+\hline
+$a[mm]$  & 504 & 407 & 675 & 358 & 438 & 556 & 515 & 619	& 477 & 411 \\
+\hline
+$R_{x_2}$ &20,32 &20,59 &20,77 &19,52 &19,48 &18,78	&19,11	&19,50	&20,07	&19,54
+\\    
+\hline   
+\end{tabularx}
+\begin{tabularx}{\textwidth}{XX}
+Wartość średnia oporu: $\overline{R}_{x_2}=19,77~\Omega $ & Niepewność: $u(R_{x_2})\approx $\\
+
+\end{tabularx}
+\end{table}
+
+
+         
+\begin{table}[!ht]
+\setlength{\extrarowheight}{5pt}
+\centering
+\begin{tabularx}{\textwidth}{XXXXXXXXXXX}
+
+\multicolumn{11}{c}{\textbf{Połączenie szeregowe ($R_1$ z $R_2$)}}\\        
+\hline
+$R_{12}[\Omega]$  & 20	&30	&35	&40	&50	&45	&25	&28	&32	&38 \\
+\hline
+$a[mm]$  & 640	&531 &500 &461 &414 &436 &575 &545 &526	&479 \\
+\hline
+$R_{x_s}$ & 35,56 & 33,97 & 35,00 & 34,21 & 35,32 & 34,79 & 33,82 & 33,54 & 35,51 & 34,94
+\\    
+\hline   
+\end{tabularx}
+\begin{tabularx}{\textwidth}{XX}
+   
+Wartość średnia oporu: $\overline{R}_{x_s}= 34,67~\Omega$ & Niepewność: $u(R_{x_s})\approx $ \\ \hline
+Opór obliczony: $R_{obl} = 33,38~\Omega$ & Niepewność: $u(R_{obl})\approx $\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[!ht]
+\setlength{\extrarowheight}{5pt}
+\centering
+\begin{tabularx}{\textwidth}{XXXXXXXXXXX}
+
+\multicolumn{11}{c}{\textbf{Połączenie równoległe ($R_1$ z $R_2$)}}\\        
+\hline
+$R_{12}[\Omega]$  & 3 &4 &5 &6 &7 &8 &9 &10 &11 &13\\
+\hline
+$a[mm]$  & 662 & 592 & 560 & 526 & 496 & 467 & 434 & 461 & 427 & 371
+  \\
+\hline
+$R_{x_r}$ & 10,87 & 9,03 & 10,45 & 10,66 & 9,80 & 9,47 & 9,32 & 10,37 & 10,29 & 10,59\\    
+\hline   
+\end{tabularx}
+\begin{tabularx}{\textwidth}{XX}
+   
+Wartość średnia oporu: $\overline{R}_{x_r}=6,99~\Omega $ & Niepewność: $u(R_{x_r})\approx $ \\ \hline
+Opór obliczony: $R_{obl} = 8,06~\Omega$ & Niepewność: $u(R_{obl})\approx $\\
+\end{tabularx}
+\end{table}
+
+
+\section{Opracowanie wyników pomiarów}
+Aby obliczyć opór $R_x$ korzystamy z poniższego wzoru:
+$$
+R_x = R_2 \frac{a}{l-a},
+$$
+gdzie $R_2$ to znana opór wzorcowy, $a$ to zmierzona długość, a $l=1000mm$ to długość  listwy z drutem oporowym.
+
+Niepewność typu A wartości $R_x$ wyznaczamy z następującego wzoru:
+$$
+u(R_x) = \sqrt{\frac{\sum \left( R_i - \overline{R}_x \right)^2 }{n(n-1)}}
+$$
+
+
+
 \end{document}
