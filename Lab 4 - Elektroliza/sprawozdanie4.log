@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.24)  9 OCT 2016 10:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.24)  8 NOV 2016 20:47
 entering extended mode
 **./sprawozdanie4.tex
 (sprawozdanie4.tex
@@ -1029,35 +1029,65 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 33.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 37.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 51.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 77.
 
 ("C:\Users\Weronika\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.f
 d"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
  [1
 
 {C:/Users/Weronika/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(sprawozdanie4.aux) ) 
+<./uklad.png, id=15, 741.52031pt x 298.86656pt>
+File: ./uklad.png Graphic file (type png)
+ <use ./uklad.png>
+Package pdftex.def Info: ./uklad.png used on input line 87.
+(pdftex.def)             Requested size: 298.75264pt x 120.41095pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 109.
+ [2 <./uklad.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
+[]\T1/ptm/m/n/10.95 warto±¢
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
+[]\T1/ptm/m/n/10.95 warto±¢
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+[]\T1/ptm/m/n/10.95 niepewno±¢
+ []
+
+[3] [4] (sprawozdanie4.aux) ) 
 Here is how much of TeX's memory you used:
- 23098 strings out of 493634
- 587856 string characters out of 3134015
- 778060 words of memory out of 3000000
- 26072 multiletter control sequences out of 15000+200000
- 25137 words of font info for 44 fonts, out of 3000000 for 9000
+ 23118 strings out of 493634
+ 588084 string characters out of 3134015
+ 783060 words of memory out of 3000000
+ 26088 multiletter control sequences out of 15000+200000
+ 33979 words of font info for 50 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,15n,96p,712b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Weronika/AppData/Local/Programs/MiKTeX 2.9/fonts
-/enc/dvips/fontname/8r.enc}<C:/Users/Weronika/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Weronika/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Weronika/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Weronika/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on sprawozdanie4.pdf (1 page, 45578 bytes).
+{C:/Users/Weronika/AppData/Local/Programs/MiKTeX 2
+.9/fonts/enc/dvips/fontname/8r.enc}<C:/Users/Weronika/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Weronika/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/We
+ronika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb><C:/Users/Weronika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr10.pfb><C:/Users/Weronika/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Users/Weronika/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Weronika/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Weroni
+ka/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users
+/Weronika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><
+C:/Users/Weronika/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8
+a.pfb>
+Output written on sprawozdanie4.pdf (4 pages, 134959 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
