@@ -1,0 +1,34 @@
+\section{Cel ćwiczenia}
+Celem ćwiczenia jest wyznaczenie stałej Faradaya, równoważnika elektrochemicznego miedzi oraz ładunku elementarnego metodą elektrolizy. 
+
+\section{Wstęp teoretyczny}
+
+Elektroliza zachodzi w układach, w których występują substancje zdolne do jonizacji, czyli rozpadu na jony. Samo zjawisko jonizacji może być wywołane zarówno przyłożonym napięciem elektrycznym, jak i zjawiskami nie generowanymi bezpośrednio przez prąd – dysocjacją elektrolityczną, autodysocjacją, wysoką temperaturą czy działaniem silnego promieniowania.
+
+By zobojętnić jon na elektrodzie, musi przepłynąć ładunek równy $w*e$, gdzie $e$ - ładunek elementarny elektronu, a $w$ - wartościowość jonu.
+Liczbę atomów które wydzieliły się na elektrodzie możemy wyznaczyć jako stosunek całkowitego ładunku ($I*t$) do ładunku pojedynczego jonu ($we$)
+\begin{equation}
+N=\frac{It}{we}
+\end{equation}
+Aby obliczyć masę osadzonych atomów, mnożymy ich ilość przez masę jednego atomu. Masę pojedynczego atomu można wyznaczyć jako stosunek masy molowej do
+liczby Avogadra, stąd
+\begin{equation}
+\label{eq:masa}
+m=N\frac{\mu}{N_A}=\frac{\mu}{weN_A}It
+\end{equation}
+
+Zauważamy, że masa wydzielonej substancji jest proporcjonalna do natężenia prądu $I$, czasu przepływu prądu $t$ oraz współczynnika oznaczanego $k$ i zwanego elektrochemicznym równoważnikiem substancji.
+\begin{equation}
+\label{eq:k}
+k=\frac{\mu}{weN_A}
+\end{equation}
+
+
+Iloczyn $eN_A$ wyraża ładunek potrzebny do wydzielenie jednego gramorównoważnika chemicznego substancji. Oznacza się go zwykle jako $F$ i nazywa stałą Faradaya.
+Ze wzoru (\ref{eq:k}) wynika jego zależność od $k$:
+\begin{equation}
+%\label{eq:k}
+F=\frac{\mu}{wk}
+\end{equation}
+
+Nie należy mylić elektrolizy z procesami zachodzącymi w ogniwie galwanicznym. W elektrolizie energia elektryczna zamieniana jest na chemiczną, a w ogniwie galwanicznym kierunek przemian energetycznych jest przeciwny, tzn. energia chemiczna w procesie reakcji redoks zamieniana jest na energię elektryczną, co objawia się generowaniem prądu w obwodzie łączącym elektrody ogniwa. Ze względu na odwrotny przebieg procesu w ogniwach galwanicznych katoda jest naładowana dodatnio, a anoda ujemnie, jednak procesy chemiczne zachodzące na obu ogniwach mają podobny charakter.
