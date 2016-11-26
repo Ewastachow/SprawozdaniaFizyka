@@ -1,0 +1,31 @@
+Fala podłuzna w precie powstaje na skutek chwilowego wychylenia sie fragment preta z połozenia równowagi
+i nastepujacych po nim drgan. Drgania te, dzieki sprezystosci osrodka, moga byc przekazywane dalej i moga
+rozchodzic sie po całym osrodku. Szybkosc rozchodzenia sie fali zalezy od bezwładnosci i sprezystosci osrodka,
+w którym sie rozchodzi.
+
+Po przekształceniach predkosc wynosi 
+
+				// wzór v=sqrt(E/p)
+
+Moduł Younga z powyzszego równania jest równy
+
+				// wzór E=pv^2
+				
+Fale dzwiekowa w precie mozna przyblizyc jako złozenie drgan harmonicznych
+sinusoidalnych. Czestotliwosci harmoniczne sa wielokrotnoscia czestotliwosci podstawowej.
+
+Długosc fali z tego wynosi
+
+				// wzór lambda=2l/n
+				
+Majac czestotliwosc fali oraz //symbol_lambda// mozna obliczyc predkosc ze wzoru:
+
+				// wzór v=f*lambda
+				
+Podstawiajac do wzoru na moduł Younga wychodzi:
+
+				// wzór E=gestość*f^2*lambda^2
+				//gęstość jako p ale nie p
+
+				
+				// można by przepisać wzory w opisu ćwiczenia z wyprowadzeniem tych rzeczy w sumie
